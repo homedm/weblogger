@@ -5,18 +5,18 @@
 		<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8">
 		<title>Web Logger</title>
 	</head>
-	<input type="button" value="Write">
-	<input type="button" value="Read">
+	<input type="button" value="Write" id="write_button">
+	<input type="button" value="Read" id="read_button">
 	<body>
 		<table class="logtable">
 			<thead>
 				<tr>
-					<td>Date</td><td>Time</td><td>Call</td><td>Freq.</td><td>Mode</td><td>My</td><td>Ur</td><td>Rem</td>
+					<td class="date">Date</td><td class="time">Time</td><td class="callsign">Call</td><td class="freq">Freq.</td><td class="mode">Mode</td><td class="report">My</td><td class="report">Ur</td><td class="rem">Rem</td>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<!-- show logged call list -->
+				<tr id="show_calllist">
 				</tr>
 			</tbody>
 		</table>
