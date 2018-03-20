@@ -1,0 +1,24 @@
+.logtable > tr > td {
+	height: 1em;
+}
+.logtable > tr > .date {
+	width: 10em;
+}
+.logtable > tr > .time {
+	width: 5;
+}
+.logtable > tr > .callsign {
+	width: 10em;
+}
+.logtable > tr > .freq {
+	width: 5em;
+}
+.logtable > tr > .mode {
+	width: 4em;
+}
+.logtable > tr > .report {
+	width: 3em;
+}
+.logtable > tr > .rem {
+	width: 4em;
+}

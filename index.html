@@ -11,13 +11,11 @@
 		<table class="logtable">
 			<thead>
 				<tr>
-					<td class="date">Date</td><td class="time">Time</td><td class="callsign">Call</td><td class="freq">Freq.</td><td class="mode">Mode</td><td class="report">My</td><td class="report">Ur</td><td class="rem">Rem</td>
+					<td class="date">Date</td><td class="time">Time</td><td class="callsign">Call</td><td class="band">Band</td><td class="mode">Mode</td><td class="report">My</td><td class="report">Ur</td><td class="rem">Rem</td>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="logtable">
 				<!-- show logged call list -->
-				<tr id="show_calllist">
-				</tr>
 			</tbody>
 		</table>
 		<table>
@@ -33,5 +31,8 @@
 				</tr>
 			</tbody>
 		</table>
+		<input type="file" id="file">
+
+		<script src="loadfile.js" charset="utf-8"></script>
 	</body>
 </html>
