@@ -25,3 +25,12 @@
 .readlogbutton {
 	display:none;
 }
+.input_table {
+	table-layout:auto;
+}
+.input_table > tr > .input_call {
+	width: 10em;
+}
+.input_table > tr > .input_report {
+	width: 3em;
+}

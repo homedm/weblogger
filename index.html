@@ -2,12 +2,33 @@
 <html>
 	<head>
 		<mata charset="utf-8">
-		<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8">
 		<title>Web Logger</title>
 	</head>
 	<input type="text" value="430" id="band"> <!-- 後々入力制限を設ける-->
 	<input type="text" value="FM" id="mode"> <!-- 後々入力制限を設ける-->
 	<body>
+		<table class="input_table">
+			<thead>
+				<tr>
+					<td class="add_button"><input type="button" id="add_button" value="Add"></td>
+					<td class="delete_button"><input type="button" id="delete_button" value="Delete"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Call</td><td><input type="text" class="input_call" id="new_call"></td>
+					<td>My RST</td><td><input type="text" class="input_report" id="new_my_rst"></td>
+					<td>Ur RST</td><td><input type="text" class="input_report" id="new_ur_rst"></td>
+				</tr>
+				<tr>
+					<td>Rem.</td>
+					<td colspan=5><input type="text" id="new_rem"></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="button" value="Write" id="write_button">
+		<input type="file" id="read_logfile" class="readlogbutton">
+		<input type="button" value="Read" id="read_button">
 		<table class="logtable">
 			<thead>
 				<tr>
@@ -18,28 +39,10 @@
 				<!-- show logged call list -->
 			</tbody>
 		</table>
-		<table>
-			<thead>
-				<tr>
-					<td><input type="button" id="add_button" value="Add"></td>
-					<td><input type="button" id="delete_button" value="Delete"></td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Call<input class="text" id="new_call"></td><td>My RST<input class="text" id="new_my_rst"></td><td>Ur RST<input class="text" id="new_ur_rst"></td>
-				</tr>
-				<tr>
-					<td>Rem.</td><td><input class="text" id="new_rem"></td>
-				</tr>
-			</tbody>
-		</table>
-		<input type="button" value="Write" id="write_button">
-		<input type="file" id="read_logfile" class="readlogbutton">
-		<input type="button" value="Read" id="read_button">
 
 		<script src="file.js" charset="utf-8"></script>
 		<script src="logging.js" charset="utf-8"></script>
 		<script src="main.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8">
 	</body>
 </html>
