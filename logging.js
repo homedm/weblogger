@@ -3,10 +3,16 @@ const addlog = () => {
 	const d_logtable = document.getElementById('logtable');
 
 	// input form
-	const s_new_call = document.getElementById('new_call').value;
-	const s_new_my_rst = document.getElementById('new_my_rst').value;
-	const s_new_ur_rst = document.getElementById('new_ur_rst').value;
-	const s_new_rem = document.getElementById('new_rem').value;
+	let o_new_call = document.getElementById('new_call');
+	let o_new_my_rst = document.getElementById('new_my_rst');
+	let o_new_ur_rst = document.getElementById('new_ur_rst');
+	let o_new_rem = document.getElementById('new_rem');
+
+	const s_new_call = o_new_call.value;
+	const s_new_my_rst = o_new_my_rst.value;
+	const s_new_ur_rst = o_new_ur_rst.value;
+	const s_new_rem = o_new_rem.value;
+
 	const s_band = document.getElementById('band').value;
 	const s_mode = document.getElementById('mode').value;
 
@@ -27,6 +33,13 @@ const addlog = () => {
 					'<td>' + s_new_rem + '</td>' +
 					'</tr>';
 	d_logtable.insertAdjacentHTML('beforeend', s_line);
+
+	// delete input box value.
+	o_new_call.value = "";
+	o_new_my_rst.value = "";
+	o_new_ur_rst.value = "";
+	o_new_rem.value = "";
 }
 const deletelog = () => {
+	alert("is not implemented function yet.");
 }
