@@ -5,8 +5,6 @@
 		<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8">
 		<title>Web Logger</title>
 	</head>
-	<input type="button" value="Write" id="write_button">
-	<input type="button" value="Read" id="read_button">
 	<input type="text" value="430" id="band"> <!-- 後々入力制限を設ける-->
 	<input type="text" value="FM" id="mode"> <!-- 後々入力制限を設ける-->
 	<body>
@@ -36,9 +34,10 @@
 				</tr>
 			</tbody>
 		</table>
-		<input type="file" id="file">
+		<input type="button" value="Write" id="write_button">
+		<input type="file" id="read_button">
 
-		<script src="loadfile.js" charset="utf-8"></script>
+		<script src="file.js" charset="utf-8"></script>
 		<script src="logging.js" charset="utf-8"></script>
 		<script src="main.js" charset="utf-8"></script>
 	</body>

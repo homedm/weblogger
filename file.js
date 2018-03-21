@@ -7,7 +7,7 @@ const checkSupport = () => {
 	}
 }
 
-const inputFile = document.getElementById('file');
+const inputFile = document.getElementById('read_button');
 let reader = new FileReader();
 
 const showlogfile = () => {
@@ -51,4 +51,6 @@ const fileChange = (ev) => {
 	// }
 
 	reader.readAsText(file); // when read file, emit load event.
+}
+const writefile = () => {
 }
