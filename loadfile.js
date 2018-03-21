@@ -39,7 +39,7 @@ const showlogfile = () => {
 const fileChange = (ev) => {
 	var target = ev.target;
 	var file = target.files[0];
-	var type = file.type;
+	// var type = file.type;
 
 	console.log(file);
 
@@ -52,7 +52,3 @@ const fileChange = (ev) => {
 
 	reader.readAsText(file); // when read file, emit load event.
 }
-
-checkSupport();
-reader.addEventListener('load', showlogfile, false);
-inputFile.addEventListener('change', fileChange, false);

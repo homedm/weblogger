@@ -7,6 +7,8 @@
 	</head>
 	<input type="button" value="Write" id="write_button">
 	<input type="button" value="Read" id="read_button">
+	<input type="text" value="430" id="band"> <!-- 後々入力制限を設ける-->
+	<input type="text" value="FM" id="mode"> <!-- 後々入力制限を設ける-->
 	<body>
 		<table class="logtable">
 			<thead>
@@ -21,18 +23,23 @@
 		<table>
 			<thead>
 				<tr>
-					<td><input type="button" value="Add"></td>
-					<td><input type="button" value="Delete"></td>
+					<td><input type="button" id="add_button" value="Add"></td>
+					<td><input type="button" id="delete_button" value="Delete"></td>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td>call<input class="text" id="new_call"></td><td>My RST<input class="text" id="new_my_rst"></td><td>Ur RST<input class="text" id="new_ur_rst"></td>
 				</tr>
+				<tr>
+					<td>Rem.</td><td><input class="text" id="new_rem"></td>
+				</tr>
 			</tbody>
 		</table>
 		<input type="file" id="file">
 
 		<script src="loadfile.js" charset="utf-8"></script>
+		<script src="logging.js" charset="utf-8"></script>
+		<script src="main.js" charset="utf-8"></script>
 	</body>
 </html>
