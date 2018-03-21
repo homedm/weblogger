@@ -7,9 +7,6 @@ const checkSupport = () => {
 	}
 }
 
-const inputFile = document.getElementById('read_button');
-let reader = new FileReader();
-
 const showlogfile = () => {
 	console.log(reader.result);
 	const logtable = document.getElementById('logtable');

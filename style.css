@@ -22,3 +22,6 @@
 .logtable > tr > .rem {
 	width: 4em;
 }
+.readlogbutton {
+	display:none;
+}
