@@ -1,4 +1,5 @@
 const addlog = () => {
+	"use strict";
 	// show form
 	const d_logtable = document.getElementById('logtable');
 
@@ -8,7 +9,7 @@ const addlog = () => {
 	let o_new_ur_rst = document.getElementById('new_ur_rst');
 	let o_new_rem = document.getElementById('new_rem');
 
-	const s_new_call = o_new_call.value;
+	const s_new_call = o_new_call.value.toUpperCase(); // change Upper case
 	const s_new_my_rst = o_new_my_rst.value;
 	const s_new_ur_rst = o_new_ur_rst.value;
 	const s_new_rem = o_new_rem.value;
@@ -41,5 +42,6 @@ const addlog = () => {
 	o_new_rem.value = "";
 }
 const deletelog = () => {
+	"use strict";
 	alert("is not implemented function yet.");
 }

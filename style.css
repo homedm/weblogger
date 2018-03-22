@@ -1,25 +1,29 @@
-.logtable > tr > td {
-	height: 1em;
+.logtable {
+	table-layout:fixed;
 }
-.logtable > tr > .date {
+.logtable > tbody {
+	background-color:
+}
+.date {
 	width: 10em;
 }
-.logtable > tr > .time {
+.time {
 	width: 5;
 }
-.logtable > tr > .callsign {
+.callsign {
 	width: 10em;
+	text-transform:uppercase;
 }
-.logtable > tr > .freq {
+.freq {
 	width: 5em;
 }
-.logtable > tr > .mode {
+.mode {
 	width: 4em;
 }
-.logtable > tr > .report {
+.report {
 	width: 3em;
 }
-.logtable > tr > .rem {
+.rem {
 	width: 4em;
 }
 .readlogbutton {
@@ -28,9 +32,9 @@
 .input_table {
 	table-layout:auto;
 }
-.input_table > tr > .input_call {
-	width: 10em;
-}
-.input_table > tr > .input_report {
-	width: 3em;
+.d_out_border {
+	padding: 2em;
+	margin-bottom:1em;
+	border: 0.2em solid #333333;
+	background-color: #ffff99;
 }

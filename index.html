@@ -4,45 +4,78 @@
 		<mata charset="utf-8">
 		<title>Web Logger</title>
 	</head>
-	<input type="text" value="430" id="band"> <!-- 後々入力制限を設ける-->
-	<input type="text" value="FM" id="mode"> <!-- 後々入力制限を設ける-->
 	<body>
-		<table class="input_table">
-			<thead>
-				<tr>
-					<td class="add_button"><input type="button" id="add_button" value="Add"></td>
-					<td class="delete_button"><input type="button" id="delete_button" value="Delete"></td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Call</td><td><input type="text" class="input_call" id="new_call"></td>
-					<td>My RST</td><td><input type="text" class="input_report" id="new_my_rst"></td>
-					<td>Ur RST</td><td><input type="text" class="input_report" id="new_ur_rst"></td>
-				</tr>
-				<tr>
-					<td>Rem.</td>
-					<td colspan=5><input type="text" id="new_rem"></td>
-				</tr>
-			</tbody>
-		</table>
-		<input type="button" value="Write" id="write_button">
-		<input type="file" id="read_logfile" class="readlogbutton">
-		<input type="button" value="Read" id="read_button">
-		<table class="logtable">
-			<thead>
-				<tr>
-					<td class="date">Date</td><td class="time">Time</td><td class="callsign">Call</td><td class="band">Band</td><td class="mode">Mode</td><td class="report">My</td><td class="report">Ur</td><td class="rem">Rem</td>
-				</tr>
-			</thead>
-			<tbody id="logtable">
-				<!-- show logged call list -->
-			</tbody>
-		</table>
+		<div class="d_out_border">
+			<input type="text" value="430" id="band"> <!-- 後々入力制限を設ける-->
+			<input type="text" value="FM" id="mode"> <!-- 後々入力制限を設ける-->
+			<table class="input_table">
+				<thead>
+					<tr>
+						<td class="add_button"><input type="button" id="add_button" value="Add"></td>
+						<td class="delete_button"><input type="button" id="delete_button" value="Delete"></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Call</td><td><input type="text" class="callsign" id="new_call"></td>
+						<td>My RST</td><td><input type="number" class="report" id="new_my_rst"></td>
+						<td>Ur RST</td><td><input type="number" class="report" id="new_ur_rst"></td>
+					</tr>
+					<tr>
+						<td colspan="6" >Rem.</td>
+					</tr>
+					<tr>
+						<!-- QRA, QTH, ANT, LIG -->
+						<td>QRA</td><td><input type="text" id="new_qra"></td>
+						<td>QTH</td><td colspan="3"><input type="text" id="new_qth"></td>
+					</tr>
+					<tr>
+						<td>ANT</td><td><input type="text" id="new_ant"></td>
+						<td>LIG</td><td colspan="3"><input type="text" id="new_lig"></td>
+					</tr>
+					<td colspan="6"><input type="text" id="new_rem"></td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="button" value="Write" id="write_button">
+			<input type="file" id="read_logfile" class="readlogbutton">
+			<input type="button" value="Read" id="read_button">
+			<table>
+				<tbody>
+					<tr>
+						<td colspan="4">OP</td>
+					</tr>
+					<tr>
+						<td>Call Sign</td><td><input type="text" class="callsign" id="op_call"></td>
+						<td>QRA</td><td><input type="text" id="op_name"></td>
+					</tr>
+					<tr>
+						<td>QTH</td><td><input type="text" id="op_qth"></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="logtable">
+				<thead>
+					<tr>
+						<td class="date">Date</td>
+						<td class="time">Time</td>
+						<td class="callsign">Call</td>
+						<td class="band">Band</td>
+						<td class="mode">Mode</td>
+						<td class="report">My RST.</td>
+						<td class="report">Ur RST.</td>
+						<td class="rem">Rem</td>
+					</tr>
+				</thead>
+				<tbody id="logtable">
+					<!-- show logged call list -->
+				</tbody>
+			</table>
+		</div>
 
 		<script src="file.js" charset="utf-8"></script>
 		<script src="logging.js" charset="utf-8"></script>
 		<script src="main.js" charset="utf-8"></script>
-		<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8">
+		<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8"/>
 	</body>
 </html>

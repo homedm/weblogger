@@ -1,4 +1,5 @@
 const checkSupport = () => {
+	"use strict";
 	// Check for the various File API support.
 	if (window.File && window.FileReader && window.FileList && window.Blob) {
 		// Success!
@@ -8,6 +9,7 @@ const checkSupport = () => {
 }
 
 const showlogfile = () => {
+	"use strict";
 	console.log(reader.result);
 	const logtable = document.getElementById('logtable');
 
@@ -34,6 +36,7 @@ const showlogfile = () => {
 }
 
 const fileChange = (ev) => {
+	"use strict";
 	var target = ev.target;
 	var file = target.files[0];
 	// var type = file.type;
@@ -50,4 +53,9 @@ const fileChange = (ev) => {
 	reader.readAsText(file); // when read file, emit load event.
 }
 const writefile = () => {
+	"use strict";
+	const logtable = document.getElementById('logtable');
+
+	for(let i=0; i < s_log.length - 1 ; i++ ) {
+	}
 }
