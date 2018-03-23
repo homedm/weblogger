@@ -15,3 +15,5 @@ deletebutton.addEventListener('click', deletelog, false);
 inputFileButton.addEventListener('click', function() {
 	inputFile.click();
 }, false);
+write_button.addEventListener('click', call_writefile, false);
+download_link.addEventListener('click', writefile, false);

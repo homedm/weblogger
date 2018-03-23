@@ -1,0 +1,12 @@
+CACHE MANIFEST
+#version 0.0.1
+
+CACHE:
+index.html
+style.css
+file.js
+logging.js
+
+NETWORK:
+
+FALLBACK:

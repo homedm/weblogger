@@ -37,8 +37,8 @@ const showlogfile = () => {
 
 const fileChange = (ev) => {
 	"use strict";
-	var target = ev.target;
-	var file = target.files[0];
+	let target = ev.target;
+	let file = target.files[0];
 	// var type = file.type;
 
 	console.log(file);
@@ -52,10 +52,47 @@ const fileChange = (ev) => {
 
 	reader.readAsText(file); // when read file, emit load event.
 }
+const call_writefile = () => {
+	const writebutton = document.getElementById('download_link');
+	writebutton.click();
+}
+
 const writefile = () => {
 	"use strict";
-	const logtable = document.getElementById('logtable');
+	console.log("write file");
 
-	for(let i=0; i < s_log.length - 1 ; i++ ) {
+	let filename = "test.log";
+
+	// save logtable'value to logtext
+	const logtable = document.getElementById('logtable');
+	const rows = logtable.rows.length;
+	// not exist data
+	if( rows === 0 ) {
+		alert(' not exist log data');
+		return;
 	}
+
+	const op_call = document.getElementById('op_call').innerText;
+	const op_name = document.getElementById('op_name').innerText;
+	const op_qth = document.getElementById('op_qth').innerText;
+	const cp_other = document.getElementById('op_other').innerText;
+
+	let logtext = 'callsign:' + op_call + '\n' + 'name:' + op_name + '\n' + 'site:' + op_qth + '\n\n';
+
+	for( let j=0; j < rows; j++ ) {
+		const date = logtable.rows[j].cells[0].innerText;
+		const time = logtable.rows[j].cells[1].innerText;
+		const call = logtable.rows[j].cells[2].innerText;
+		const band = logtable.rows[j].cells[3].innerText;
+		const mode = logtable.rows[j].cells[4].innerText;
+		const myrst = logtable.rows[j].cells[5].innerText;
+		const urrst = logtable.rows[j].cells[6].innerText;
+		const rem = logtable.rows[j].cells[7].innerText;
+		logtext += date + ', ' + time + ', ' + call + ', ' + band + ', ' + mode + ', ' + myrst + ', ' + urrst + ', ' + rem + '\n';
+	}
+
+	let blob = new Blob( [logtext], {type: "text/plain"} );
+	let url = window.URL.createObjectURL(blob);
+	document.getElementById('download_link').href = url;
+	document.getElementById('download_link').download = filename;
 }

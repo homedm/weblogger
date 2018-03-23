@@ -15,7 +15,7 @@ const addlog = () => {
 	const s_new_rem = o_new_rem.value;
 
 	const s_band = document.getElementById('band').value;
-	const s_mode = document.getElementById('mode').value;
+	const s_mode = document.getElementById('mode').value.toUpperCase();
 
 	let o_date = new Date();
 	const i_year = o_date.getFullYear();

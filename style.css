@@ -1,40 +1,61 @@
 .logtable {
 	table-layout:fixed;
+	background-color: #E0D98B;
+	float:left;
 }
 .logtable > tbody {
 	background-color:
 }
 .date {
-	width: 10em;
+	width: 6em;
 }
 .time {
-	width: 5;
+	width: 4em;
 }
 .callsign {
-	width: 10em;
+	width: 6em;
 	text-transform:uppercase;
 }
-.freq {
-	width: 5em;
+.band {
+	width: 3em;
 }
 .mode {
-	width: 4em;
+	width: 3em;
+	text-transform: uppercase;
 }
 .report {
 	width: 3em;
 }
 .rem {
-	width: 4em;
+	width: 10em;
 }
+.rem_other {
+	width: 32em;
+}
+
 .readlogbutton {
 	display:none;
 }
 .input_table {
 	table-layout:auto;
+	background-color: #BDB213;
+	float: left;
+	margin-bottom:1em;
+	margin-top: 1em;
+}
+.personal_data_table {
+	float: left;
+}
+.float_clear {
+	clear:both;
 }
 .d_out_border {
 	padding: 2em;
 	margin-bottom:1em;
 	border: 0.2em solid #333333;
 	background-color: #ffff99;
+	float: left;
+}
+.download {
+	display:none;
 }
