@@ -17,3 +17,10 @@ inputFileButton.addEventListener('click', function() {
 }, false);
 write_button.addEventListener('click', call_writefile, false);
 download_link.addEventListener('click', writefile, false);
+
+// for UX
+new_ur_rst.addEventListener('keydown', addlogbyenter, false);
+new_call.addEventListener('keydown', movefocusTomyrst, false);
+new_my_rst.addEventListener('keydown', movefocusTourrst, false);
+
+document.getElementById('new_call').focus();

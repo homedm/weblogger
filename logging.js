@@ -45,3 +45,34 @@ const deletelog = () => {
 	"use strict";
 	alert("is not implemented function yet.");
 }
+// controll dom focus
+const addlogbyenter = (e) => {
+	if( checkkeydown(e.keyCode) === 1 ) {
+		// if enter
+		const addbutton = document.getElementById('add_button');
+		addbutton.click();
+		const callsign = document.getElementById('new_call');
+		callsign.focus();
+	}
+}
+const movefocusTomyrst = (e) => {
+	if( checkkeydown(e.keyCode) === 1 ) {
+		// if enter
+		const myrst = document.getElementById('new_my_rst');
+		myrst.focus();
+	}
+}
+const movefocusTourrst = (e) => {
+	if( checkkeydown(e.keyCode) === 1 ) {
+		// if enter
+		const urrst = document.getElementById('new_ur_rst');
+		urrst.focus();
+	}
+}
+
+const checkkeydown = (key) => {
+	if( key === 13 ) {
+		return 1;
+	}
+	return 0;
+}

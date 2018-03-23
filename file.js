@@ -7,7 +7,6 @@ const checkSupport = () => {
 		alert('The File APIs are not fully supported in this browser.');
 	}
 }
-
 const showlogfile = () => {
 	"use strict";
 	console.log(reader.result);
@@ -27,12 +26,27 @@ const showlogfile = () => {
 			let s_line = '<tr><td>' + s_data[0] + '</td><td>' + s_data[1] + '</td><td>' + s_data[2] + '</td><td>' + s_data[3] + '</td><td>' + s_data[4] + '</td><td>' + s_data[5] + '</td><td>' + s_data[6] + '</td><td>' + s_data[7] + '</td></tr>';
 			logtable.insertAdjacentHTML('beforeend', s_line);
 		}
+		if( flag === false ) {
+			let s_line = s_log[i].split(':');
+			if( s_line[0] === 'callsign' ) {
+				document.getElementById('op_call').value = s_line[1];
+			}
+			if( s_line[0] === 'name' ) {
+				document.getElementById('op_name').value = s_line[1];
+			}
+			if( s_line[0] === 'site' ) {
+				document.getElementById('op_qth').value = s_line[1];
+			}
+			if( s_line[0] === 'other' ) {
+				document.getElementById('op_other').value = s_line[1];
+			}
+		}
 		if( s_log[i] === '' && flag == false ) {
 			// read personal data
 			flag = true;
 		}
 	}
-
+	document.getElementById('new_call').focus();
 }
 
 const fileChange = (ev) => {
