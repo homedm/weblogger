@@ -6,6 +6,9 @@
 .logtable > tbody {
 	background-color:
 }
+.logtable > tbody > tr > td {
+	overflow:hidden;
+}
 .date {
 	width: 6em;
 }
